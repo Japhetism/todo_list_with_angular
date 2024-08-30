@@ -1,0 +1,46 @@
+<div class="main">
+  <h1>{{ title }}</h1>
+  <div>
+    <label for="addTodoInput">What would you like to do today</label>
+    <div class="title-container">
+      <input #newTodoTitle placeholder="Add a Todo Title" class="lg-text-input" id="#addTodoTitleInput" /> 
+    </div>
+    <div>
+      <textarea #newTodoDescription placeholder="Add a Todo Description" class="lg-text-input" id="#addTodoDescriptionInput"></textarea>  
+    </div>
+    <div>
+      <button class="btn-primary" (click)="addTodo(newTodoTitle.value, newTodoDescription.value); newTodoTitle.value=''; newTodoDescription.value=''">Add</button>
+    </div>
+  </div>
+  <!-- Filters -->
+  <div class="btn-wrapper">
+    <button
+      class="btn btn-menu"
+      [class.active]="filter == 'all'"
+      (click)="filter = 'all'">
+      All
+    </button>
+  
+    <button
+      class="btn btn-menu"
+      [class.active]="filter == 'active'"
+      (click)="filter = 'active'">
+      To Do
+    </button>
+  
+    <button
+      class="btn btn-menu"
+      [class.active]="filter == 'done'"
+      (click)="filter = 'done'">
+      Done
+    </button>
+  </div>
+  <!-- End of Filters -->
+  <div>
+    <ul>
+      <li *ngFor="let t of todos">
+        <app-todo (updateTodo)="updateTodo($event)" (removeTodo)="removeTodo(t)" [todo]="t"></app-todo>
+      </li>
+    </ul>
+  </div> 
+</div>

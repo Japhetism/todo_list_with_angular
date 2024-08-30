@@ -1,0 +1,67 @@
+.main {
+    max-width: 500px;
+    width: 85%;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: left;
+    box-shadow:
+      0 2px 4px 0 rgb(0 0 0 / 20%),
+      0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
+}
+  
+@media screen and (min-width: 600px) {
+    .main {
+      width: 70%;
+    }
+}
+  
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.title-container {
+    margin-bottom: 20px;
+}
+  
+.lg-text-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #000;
+    display: block;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+button {
+    border-radius: 10px;
+}
+  
+.btn-wrapper {
+    margin-bottom: 2rem;
+}
+  
+.btn-menu {
+    flex-basis: 32%;
+}
+  
+.active {
+    color: green;
+}
+  
+ul {
+    padding-inline-start: 0;
+}
+  
+ul li {
+    list-style: none;
+    background-color: #E5E4E2;
+    margin-top: 10px;
+    padding: 2px 5px 15px 15px;
+    min-height: 50px;
+    border-radius: 5px;
+    box-shadow: #000;
+}
+  
